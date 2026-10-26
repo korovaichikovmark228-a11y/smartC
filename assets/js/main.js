@@ -3,14 +3,12 @@
   "use strict";
 
   var root = document.documentElement;
-  var body = document.body;
   var nav = document.querySelector(".nav");
   var menu = document.querySelector(".nav__menu");
-  var links = Array.prototype.slice.call(document.querySelectorAll(".nav__link[data-target]"));
 
   /* ---------- Высота закреплённой шапки → CSS-переменная --header-space ----------
-     Разделы начинаются с отступа этой высоты, поэтому при переходе из меню
-     заголовок раздела не прячется под шапкой (на телефоне шапка выше). */
+     Содержимое страниц начинается с отступа этой высоты, поэтому ничего
+     не прячется под шапкой (на телефоне шапка выше — в два ряда). */
   var setHeaderSpace = function () {
     if (!nav) return;
     var bottom = Math.ceil(nav.getBoundingClientRect().bottom);
@@ -20,39 +18,35 @@
   window.addEventListener("resize", setHeaderSpace);
   window.addEventListener("load", setHeaderSpace);
 
-  /* ---------- Подсветка текущего раздела в меню при прокрутке ---------- */
-  var sections = links.map(function (a) {
-    return document.getElementById(a.getAttribute("data-target"));
-  });
-  var current = null;
-  var lockUntil = 0; // пока идёт прокрутка по клику из меню, подсветку по скроллу не трогаем
-  var setActive = function (link, instant) {
-    if (link === current) return;
-    if (current) current.classList.remove("is-active");
-    current = link;
-    if (!link) return;
-    link.classList.add("is-active");
-    // на узких экранах меню прокручивается вбок — держим активный пункт в поле зрения
-    if (menu && menu.scrollWidth > menu.clientWidth) {
-      var left = Math.max(0, link.offsetLeft - (menu.clientWidth - link.offsetWidth) / 2);
-      if (instant) menu.scrollLeft = left;
-      else menu.scrollTo({ left: left, behavior: "smooth" });
-    }
+  /* ---------- Меню-вкладки: на узких экранах полоска листается вбок ----------
+     Текущую вкладку сразу показываем в поле зрения. */
+  var centerActive = function () {
+    var active = menu && menu.querySelector(".nav__link.is-active");
+    if (!active || menu.scrollWidth <= menu.clientWidth) return;
+    menu.scrollLeft = Math.max(0, active.offsetLeft - (menu.clientWidth - active.offsetWidth) / 2);
   };
+  centerActive();
+  window.addEventListener("resize", centerActive);
 
-  /* ---------- Плавный переход к разделу по ссылкам вида #раздел ---------- */
+  /* ---------- Плавная прокрутка к якорю на той же странице (например, «Оставить заявку» на главной) ---------- */
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fixTimer = null;
   var targetTop = function (el) {
     var margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
     return el.getBoundingClientRect().top + window.scrollY - margin;
   };
+  var jump = function (el) { window.scrollTo(0, Math.round(targetTop(el))); };   // мгновенно
   var goTo = function (el) {
-    window.scrollTo({ top: targetTop(el), behavior: reduceMotion ? "auto" : "smooth" });
-    // если по пути догрузились картинки и раздел сместился — доводим точно
+    if (reduceMotion) { jump(el); return; }
+    try {
+      window.scrollTo({ top: targetTop(el), behavior: "smooth" });
+    } catch (err) {
+      jump(el);
+    }
+    // страховка: если плавная прокрутка не сработала или по пути догрузились картинки — доводим мгновенно
     clearTimeout(fixTimer);
     fixTimer = setTimeout(function () {
-      if (Math.abs(targetTop(el) - window.scrollY) > 3) window.scrollTo({ top: targetTop(el), behavior: "auto" });
+      if (Math.abs(targetTop(el) - window.scrollY) > 3) jump(el);
     }, 1100);
   };
   document.addEventListener("click", function (e) {
@@ -62,40 +56,15 @@
     var el = id && document.getElementById(id);
     if (!el) return;
     e.preventDefault();
-    var link = null;
-    links.forEach(function (l) { if (l.getAttribute("data-target") === id) link = l; });
-    setActive(link, true);
-    lockUntil = Date.now() + 1300;
     goTo(el);
-    setTimeout(function () { onScroll(); }, 1350);
     if (history.replaceState) history.replaceState(null, "", "#" + id);
   });
-  // открыли сайт по ссылке с якорем (например, …/#founder) — после загрузки картинок встаём точно на раздел
+  // пришли по ссылке с якорем (например, index.html#request) — после загрузки картинок встаём точно на блок
   window.addEventListener("load", function () {
     var id = location.hash.slice(1);
     var el = id && document.getElementById(id);
-    if (el) window.scrollTo({ top: targetTop(el), behavior: "auto" });
+    if (el) jump(el);
   });
-
-  var ticking = false;
-  var onScroll = function () {
-    ticking = false;
-    body.classList.toggle("is-scrolled", window.scrollY > 260);
-    if (Date.now() < lockUntil) return;
-    var line = (parseFloat(getComputedStyle(root).getPropertyValue("--header-space")) || 60) + 40;
-    var active = null;
-    for (var i = 0; i < sections.length; i++) {
-      var s = sections[i];
-      if (s && s.getBoundingClientRect().top - line <= 0 && s.getBoundingClientRect().bottom - line > 0) {
-        active = links[i];
-      }
-    }
-    setActive(active);
-  };
-  window.addEventListener("scroll", function () {
-    if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
-  }, { passive: true });
-  onScroll();
 
   /* ---------- Форма заявки ---------- */
   var form = document.querySelector("#request-form");

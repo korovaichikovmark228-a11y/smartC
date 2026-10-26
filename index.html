@@ -18,27 +18,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/manrope-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=202610202236">
+  <link rel="stylesheet" href="assets/css/style.css?v=202610261351">
 </head>
 <body class="home">
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Разделы сайта">
       <div class="nav__brand">
-        <a class="nav__logo" href="#top" aria-label="SmartC — в начало">
+        <a class="nav__logo" href="index.html" aria-label="SmartC — на главную">
           <img class="nav__logo-icon" src="assets/img/logo-icon.png" width="28" height="28" alt="">
           <img class="nav__logo-text" src="assets/img/logo-text.png" width="51" height="17" alt="SmartC">
         </a>
         <span class="nav__tagline">Интеллектуальные<br>дорожные системы</span>
       </div>
       <div class="nav__menu" id="site-menu">
-        <a class="nav__link" href="#about" data-target="about">О нас</a>
-        <a class="nav__link" href="#icross" data-target="icross">iCross</a>
-        <a class="nav__link" href="#examples" data-target="examples">Примеры</a>
-        <a class="nav__link" href="#spin" data-target="spin">СПИН Периметр</a>
-        <a class="nav__link" href="#cooperation" data-target="cooperation">Условия сотрудничества</a>
-        <a class="nav__link" href="#documents" data-target="documents">Документация</a>
-        <a class="nav__link" href="#founder" data-target="founder">Основатель</a>
+        <a class="nav__link" href="about.html">О нас</a>
+        <a class="nav__link" href="icrosswalk.html">iCross</a>
+        <a class="nav__link" href="examples.html">Примеры</a>
+        <a class="nav__link" href="spin-perimetr.html">СПИН Периметр</a>
+        <a class="nav__link" href="cooperation.html">Условия сотрудничества</a>
+        <a class="nav__link" href="documents.html">Документация</a>
+        <a class="nav__link" href="founder.html">Основатель</a>
       </div>
       <a class="nav__cta" href="#request">Оставить заявку</a>
     </nav>
@@ -48,12 +48,11 @@
 
   <section class="hero" id="top">
     <div class="container hero__inner">
-      <img class="hero__icon" src="assets/img/logo-icon.png" width="28" height="28" alt="">
       <h1 class="hero__title"><span>SmartC</span><span class="hl">iCrossWalk</span></h1>
       <p class="hero__lead">Светосигнальная система предупреждения водителей о наличии <br class="br-d">пешеходов в зоне нерегулируемых пешеходных переходах</p>
       <div class="hero__actions">
         <a class="btn btn--green" href="files/SmartC-iCrossWalk-2025.pdf" download>Скачать презентацию <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2.5v9.5M4.8 7.8 9 12l4.2-4.2M3 15.5h12"/></svg></a>
-        <a class="btn btn--outline" href="#icross">Подробнее о системе <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 9h13M10.5 4l5 5-5 5"/></svg></a>
+        <a class="btn btn--outline" href="icrosswalk.html">Подробнее о системе <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 9h13M10.5 4l5 5-5 5"/></svg></a>
       </div>
     </div>
   </section>
@@ -84,7 +83,7 @@
           <div class="tile tile--on tile--g2" style="--c:4;--r:2;background:#7ac534" title="Вологодская область: 27"><span class="tile__code">ВОЛОГ</span><span class="tile__val">27</span></div>
           <div class="tile" style="--c:8;--r:2"><span class="tile__code">АРХ</span><span class="tile__val">0</span></div>
           <div class="tile" style="--c:9;--r:2"><span class="tile__code">КОМИ</span><span class="tile__val">0</span></div>
-          <div class="tile tile--on tile--g2 tile--light" style="--c:10;--r:2;background:#007e2d" title="Ямало-Ненецкий АО: 148"><span class="tile__code">ЯНАО</span><span class="tile__val">148</span></div>
+          <div class="tile tile--3d tile--on tile--g2 tile--light" style="--c:10;--r:2;background:#007e2d" title="Ямало-Ненецкий АО: 148"><span class="tile__code">ЯНАО</span><span class="tile__val">148</span></div>
           <div class="tile" style="--c:13;--r:2"><span class="tile__code">КРАС</span><span class="tile__val">0</span></div>
           <div class="tile" style="--c:15;--r:2"><span class="tile__code">САХА</span><span class="tile__val">0</span></div>
           <div class="tile" style="--c:16;--r:2"><span class="tile__code">МАГ</span><span class="tile__val">0</span></div>
@@ -184,267 +183,6 @@
     </div>
   </section>
 
-  <!-- ===================== О компании ===================== -->
-  <section class="block block--about" id="about" aria-label="О компании">
-
-  <div class="container">
-    <h2 class="visually-hidden">О компании SmartC</h2>
-    <section class="about-intro">
-      <div class="about-intro__text">
-        <p>Компания <span class="dg">SmartC</span> с 2018 года ведущий <br class="br-d">в России разработчик и производитель <br class="br-d">систем <span class="dg">интеллектуального управления пешеходным трафиком.</span></p>
-        <a class="btn btn--dark about-intro__btn" href="#request">Заказать расчёт стоимости <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 9h13M10.5 4l5 5-5 5"/></svg></a>
-      </div>
-      <div class="badges" aria-hidden="true">
-        <img src="assets/img/badge-mincifry.png" alt="" width="63" height="63">
-        <img src="assets/img/badge-skolkovo.png" alt="" width="63" height="65">
-        <img src="assets/img/badge-asi.png" alt="" width="63" height="64">
-      </div>
-      <div class="badge-texts">
-        <p>С 2019 года<br>Аккредитованная<br>IT компания</p>
-        <p>С 2021 года<br>резидент Сколково</p>
-        <p>С 2023 года<br>участник АСИ</p>
-      </div>
-      <ul class="about-badges-mobile">
-        <li><img src="assets/img/badge-mincifry.png" alt="Минцифры России" width="56" height="56">С 2019 года — аккредитованная IT компания</li>
-        <li><img src="assets/img/badge-skolkovo.png" alt="Сколково" width="56" height="58">С 2021 года — резидент Сколково</li>
-        <li><img src="assets/img/badge-asi.png" alt="Агентство стратегических инициатив" width="56" height="57">С 2023 года — участник АСИ</li>
-      </ul>
-      <div class="facts">
-        <div class="fact"><p class="fact__num">821</p><p class="fact__label">проектов<br>реализовано</p></div>
-        <div class="fact"><p class="fact__num">3</p><p class="fact__label">подразделения<br>на территории РФ</p></div>
-        <div class="fact"><p class="fact__num">5</p><p class="fact__label">патента<br>зарегистрировано</p></div>
-        <div class="fact"><p class="fact__num">6</p><p class="fact__label">АПК в дорожной<br>сфере разработано</p></div>
-      </div>
-    </section>
-
-    <div class="about-row">
-      <section class="about-card">
-        <h2 class="about-card__title">О НАС</h2>
-        <p class="about-card__text">Наша компания с 2018 года занимается разработкой технологических <br class="br-d">решений в области Smart City.<br>Мы осуществляем полный цикл разработки от НИОКР <br class="br-d">до внедрения проектов на всей территории РФ и странах СНГ.</p>
-      </section>
-      <section class="partners">
-        <h2 class="partners__title">ПАРТНЕРЫ ПРОЕКТА</h2>
-        <ul class="partners__list partners__list--1">
-          <li class="p-mts"><img width="284" height="280" src="assets/img/partner-mts.png" alt="МТС" loading="lazy"></li>
-          <li class="p-beeline"><img width="480" height="97" src="assets/img/partner-beeline.png" alt="Билайн" loading="lazy"></li>
-          <li class="p-rostelecom"><img width="344" height="308" src="assets/img/partner-rostelecom.png" alt="Ростелеком" loading="lazy"></li>
-          <li class="p-voicelink"><img width="480" height="98" src="assets/img/partner-voicelink.png" alt="ВойсЛинк, группа компаний" loading="lazy"></li>
-        </ul>
-        <ul class="partners__list partners__list--2">
-          <li class="p-kamaflow"><img width="280" height="280" src="assets/img/partner-kamaflow.png" alt="Kama Flow Business Launcher" loading="lazy"></li>
-          <li class="p-lobachevsky"><img width="480" height="118" src="assets/img/partner-lobachevsky.png" alt="Лобачевский" loading="lazy"></li>
-          <li class="p-fvc"><img width="480" height="101" src="assets/img/partner-friendlyvc.png" alt="Friendly VC" loading="lazy"></li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="institutes">
-      <h2 class="institutes__title">Институты развития</h2>
-      <div class="institutes__list">
-        <div class="institute institute--skolkovo"><img width="700" height="197" src="assets/img/inst-skolkovo.png" alt="Сколково" loading="lazy"></div>
-        <div class="institute institute--fond"><img width="420" height="215" src="assets/img/inst-fond.png" alt="Фонд содействия инновациям" loading="lazy"></div>
-        <div class="institute institute--tyumen"><img width="220" height="174" src="assets/img/inst-tyumen.png" alt="Герб Тюменской области" loading="lazy"><p>Департамент инвестиционной<br>политики и государственной<br>поддержки предпринимательства<br>Тюменской области</p></div>
-      </div>
-    </section>
-  </div>
-  </section>
-
-  <!-- ===================== Система iCrossWalk ===================== -->
-  <section class="block block--icross" id="icross" aria-label="Система iCrossWalk">
-
-  <div class="container">
-    <section class="product-hero">
-      <h2 class="product-hero__title">Система <span>iCrossWalk</span></h2>
-      <ul class="product-hero__list">
-        <li>Детектор пешеходов</li>
-        <li>Детектор ТС</li>
-        <li>Детектор СИМ</li>
-        <li>Расчет направления движения пешеходов</li>
-      </ul>
-      <div class="product-hero__actions">
-        <a class="btn btn--lime" href="files/SmartC-iCrossWalk-2025.pdf" download>Скачать презентацию <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2.5v9.5M4.8 7.8 9 12l4.2-4.2M3 15.5h12"/></svg></a>
-        <p class="price-tag price-tag--glass">Стоимость АПК от 1,2 млн до 2 млн <br class="br-d">в зависимости от комплектации</p>
-      </div>
-    </section>
-
-    <section class="composition" aria-labelledby="comp-title">
-      <h2 class="h2 composition__title" id="comp-title">Состав светосигнальной системы<br>предупреждения <span class="hl">iCrossWalk</span></h2>
-      <div class="composition__grid">
-      <div class="composition__col">
-        <div class="comp-card is-active">
-          <div><h3 class="comp-card__title">Шкаф управления<br>с локальным сервером с ИИ</h3><p class="comp-card__text">Детектор пешеходов, ТС, СИМ, определение траектории движения, управление сигнальными элементами</p></div>
-          <img width="360" height="240" class="comp-card__icon" src="assets/img/comp-cabinet.png" alt="" style="width:130px" loading="lazy">
-        </div>
-        <div class="comp-card">
-          <div><h3 class="comp-card__title">Прожекторы освещения</h3><p class="comp-card__text">Дополнительное освещение зоны перехода</p></div>
-          <img width="336" height="246" class="comp-card__icon" src="assets/img/comp-lighting.png" alt="" style="width:84px" loading="lazy">
-        </div>
-        <div class="comp-card">
-          <div><h3 class="comp-card__title">Видеодетекторы</h3><p class="comp-card__text">Распознавание пешеходов с точностью 97% при помощи нейросетей глубокого обучения. Видеозапись процесса движения человека.</p></div>
-          <img width="360" height="282" class="comp-card__icon" src="assets/img/comp-video.png" alt="" style="width:108px" loading="lazy">
-        </div>
-      </div>
-      <div class="composition__col">
-        <div class="comp-card">
-          <div><h3 class="comp-card__title">Проекция дорожной разметки 1.14.1</h3><p class="comp-card__text">Привлечение внимания водителей к пешеходному переходу.</p></div>
-          <img width="360" height="306" class="comp-card__icon" src="assets/img/comp-projection.png" alt="" style="width:108px" loading="lazy">
-        </div>
-        <div class="comp-card">
-          <div><h3 class="comp-card__title">Информационное табло "ПЕШЕХОД"</h3><p class="comp-card__text">Информирование водителей о нахождении пешеходов на дороге</p></div>
-          <img width="360" height="249" class="comp-card__icon" src="assets/img/comp-board.png" alt="" style="width:148px" loading="lazy">
-        </div>
-        <div class="comp-card">
-          <div><h3 class="comp-card__title">Светодиодный дорожный знак</h3><p class="comp-card__text">Подсветка дорожного знака 5.19.1 в вечернее время</p></div>
-          <img width="313" height="270" class="comp-card__icon" src="assets/img/comp-sign.png" alt="" style="width:82px" loading="lazy">
-        </div>
-      </div>
-      </div>
-    </section>
-  </div>
-  </section>
-
-  <!-- ===================== Примеры реализации ===================== -->
-  <section class="block block--examples" id="examples" aria-label="Примеры реализации">
-
-  <section class="container examples">
-    <h2 class="h2 examples__title">Примеры реализации</h2>
-    <div class="examples__grid">
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/pedestrian-detection.jpg" alt="Система iCrossWalk, г. Москва" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Москва</figcaption>
-      </figure>
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/example-ekaterinburg.jpg" alt="Система iCrossWalk, г. Екатеринбург" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Екатеринбург</figcaption>
-      </figure>
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/example-kazan.jpg" alt="Система iCrossWalk, г. Казань" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Казань</figcaption>
-      </figure>
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/example-samara.jpg" alt="Система iCrossWalk, г. Самара" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Самара</figcaption>
-      </figure>
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/example-moscow-2.jpg" alt="Система iCrossWalk, г. Москва" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Москва</figcaption>
-      </figure>
-      <figure class="example" style="margin:0">
-        <div class="example__media"><img class="example__img" src="assets/img/example-nizhny-novgorod.jpg" alt="Система iCrossWalk, г. Нижний Новгород" loading="lazy" width="430" height="260"></div>
-        <figcaption class="example__caption">г. Нижний Новгород</figcaption>
-      </figure>
-    </div>
-    <p class="examples__note">*Дополнительные примеры по запросу</p>
-  </section>
-  </section>
-
-  <!-- ===================== СПИН Периметр ===================== -->
-  <section class="block block--spin" id="spin" aria-label="СПИН Периметр">
-
-  <div class="container">
-    <section class="spin">
-      <div class="spin__media"><img src="assets/img/spin-perimetr.jpg" alt="Кадры фиксации нарушения системой СПИН Периметр: пешеходный переход, автомобиль и распознанный госномер" width="723" height="644"></div>
-      <div class="spin__body">
-        <h2 class="spin__title">Система<br>фотовидеофиксации<br>СПИН Периметр</h2>
-        <ul class="spin__list">
-          <li>Автоматическая фиксация непропуска пешеходов</li>
-          <li>Распознавание ГРЗ (Россия, СНГ) — точность 98%</li>
-          <li>Интеграция с системой Паутина, передача материала в ЦАФАП</li>
-          <li>В перспективе: выезд на встречную полосу, движение по обочине и автобусной полосе, остановка на пешеходном переходе</li>
-        </ul>
-        <div class="spin__actions">
-          <a class="btn btn--lime" href="files/SmartC-SPIN-Perimetr-2025.pdf" download>Скачать презентацию <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2.5v9.5M4.8 7.8 9 12l4.2-4.2M3 15.5h12"/></svg></a>
-          <p class="price-tag price-tag--solid">Стоимость АПК от 1 млн до 1,7 млн <br class="br-d">в зависимости от комплектации</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  </section>
-
-  <!-- ===================== Условия сотрудничества ===================== -->
-  <section class="block block--cooperation" id="cooperation" aria-label="Условия сотрудничества">
-
-  <section class="container coop">
-    <h2 class="h2 coop__title">Условия сотрудничества <span class="hl">с регионом</span></h2>
-    <ol class="coop__list" style="list-style:none;margin-bottom:0">
-      <li class="coop-item"><span class="coop-item__num">1</span><p class="coop-item__text">Бесплатное<br>тестирование<br>3–6 месяцев<br>на одном переходе</p></li>
-      <li class="coop-item"><span class="coop-item__num">2</span><p class="coop-item__text">Гибкие модели<br>поставки:<br>CAPEX и OPEX</p></li>
-      <li class="coop-item"><span class="coop-item__num">3</span><p class="coop-item__text">Полный цикл<br>от СМР до интеграции<br>— «под ключ»</p></li>
-      <li class="coop-item"><span class="coop-item__num">4</span><p class="coop-item__text">Масштабирование<br>на региональном<br>уровне</p></li>
-    </ol>
-  </section>
-  <figure class="coop-scheme" style="margin-bottom:0;margin-left:0;margin-right:0">
-    <img src="assets/img/cooperation-scheme.jpg" width="1531" height="1027" loading="lazy"
-         alt="Схема работы iCrossWalk: проектор для проекции дорожной разметки 1.14.1, усиленная подсветка НПП в тёмное время суток, светодиодный знак 5.19.1, табло «ПЕШЕХОД». Проекция работает в тёмное время суток и при плохой погоде.">
-  </figure>
-  </section>
-
-  <!-- ===================== Документация ===================== -->
-  <section class="block block--documents" id="documents" aria-label="Документация">
-
-  <div class="container">
-    <section class="docs">
-      <h2 class="h2 docs__title"><span class="hl">Нормативные</span> документы и сертификация</h2>
-      <div class="docs-card">
-        <div class="docs-list">
-          <div class="docs-list__col">
-          <div class="doc-item"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">СП 396.1325800.2018 (пункт 7.1.3)</p></div>
-          <div class="doc-item doc-item--tall"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">Реестр российского ПО — номер 15277<br>(для «Smart детектор»)</p></div>
-          <div class="doc-item doc-item--tall"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">Разработка ГОСТ совместно с ТК57 и ТК418<br>(в процессе)</p></div>
-          <div class="doc-item doc-item--tall"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">СПИН Периметр включён в Государственный реестр <br class="br-d">средств измерений.&nbsp; Регистрационный № 104-10-4740</p></div>
-          </div>
-          <div class="docs-list__col">
-          <div class="doc-item"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">Реестр новых наилучших продуктов РОСДОРНИИ:<br><a href="https://rnnt.ru/productions/10079923" target="_blank" rel="noopener">https://rnnt.ru/productions/10079923</a><br><a href="https://rnnt.ru/documents/10079902" target="_blank" rel="noopener">https://rnnt.ru/documents/10079902</a></p></div>
-          <div class="doc-item"><img class="doc-item__icon" src="assets/img/icon-document.png" alt="" width="33" height="43"><p class="doc-item__text">Каталог ГИСП, реестр российской промышленной <br class="br-d">продукции:<br><a href="https://gisp.gov.ru/goods/#/product/5750234" target="_blank" rel="noopener">https://gisp.gov.ru/goods/#/product/5750234</a><br><a href="https://gisp.gov.ru/goods/#/product/5750293" target="_blank" rel="noopener">https://gisp.gov.ru/goods/#/product/5750293</a></p></div>
-          </div>
-        </div>
-        <div class="gov-logos">
-          <img width="760" height="322" src="assets/img/gov-minstroy.png" alt="Минстрой России" loading="lazy">
-          <img width="760" height="136" src="assets/img/gov-minpromtorg.png" alt="Минпромторг России" loading="lazy">
-          <img width="760" height="352" src="assets/img/gov-rosstandart.png" alt="Росстандарт" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="letters" aria-labelledby="letters-title">
-      <h2 class="h2 letters__title" id="letters-title">Рекомендательные письма и отчеты</h2>
-      <div class="letters__rows">
-        <div class="letters__row">
-        <a class="letter" href="assets/img/doc-1.jpg" data-lightbox style="--ar:0.733"><img width="700" height="954" src="assets/img/doc-1-thumb.jpg" alt="Описание изобретения к патенту RU 2759470" loading="lazy"></a>
-        <a class="letter" href="assets/img/doc-2.jpg" data-lightbox style="--ar:0.707"><img width="700" height="990" src="assets/img/doc-2-thumb.jpg" alt="Заключение ФБУ «НИЦ ПМ — Ростест» по результатам испытаний СПИН Периметр" loading="lazy"></a>
-        <a class="letter" href="assets/img/doc-3.jpg" data-lightbox style="--ar:0.772"><img width="700" height="907" src="assets/img/doc-3-thumb.jpg" alt="Декларация о соответствии ЕАЭС — система фотовидеофиксации СПИН Периметр" loading="lazy"></a>
-        <a class="letter" href="assets/img/doc-4.jpg" data-lightbox style="--ar:0.709"><img width="700" height="987" src="assets/img/doc-4-thumb.jpg" alt="Патент на изобретение № 2759470" loading="lazy"></a>
-        </div>
-        <div class="letters__row">
-        <a class="letter" href="assets/img/doc-5.jpg" data-lightbox style="--ar:0.702"><img width="700" height="997" src="assets/img/doc-5-thumb.jpg" alt="Свидетельство о государственной регистрации программы для ЭВМ № 2022612761 «SmartC Detector»" loading="lazy"></a>
-        <a class="letter" href="assets/img/doc-6.jpg" data-lightbox style="--ar:0.782"><img width="700" height="895" src="assets/img/doc-6-thumb.jpg" alt="Декларация о соответствии ЕАЭС — светосигнальная система iCrossWalk" loading="lazy"></a>
-        <a class="letter" href="assets/img/doc-7.jpg" data-lightbox style="--ar:1.244"><img width="700" height="563" src="assets/img/doc-7-thumb.jpg" alt="Выписка из реестра российской промышленной продукции" loading="lazy"></a>
-        </div>
-      </div>
-    </section>
-  </div>
-  </section>
-
-  <!-- ===================== Основатель ===================== -->
-  <section class="block block--founder" id="founder" aria-label="Основатель">
-
-  <div class="container">
-    <section class="founder">
-      <div class="founder__photo"><img src="assets/img/founder.jpg" alt="Анисимов Илья Александрович" width="508" height="704"></div>
-      <div class="founder__body">
-        <p class="founder__role"><span>Основатель компании</span><span>Генеральный директор, к.т.н., доцент.</span></p>
-        <h2 class="founder__name"><span>Анисимов</span><span>Илья</span><span>Александрович</span></h2>
-        <div class="founder__line"></div>
-        <p class="founder__lead">Эксперт Федерального реестра экспертов направления «Транспортные и космические системы». Участник разработки изменений 3 в СП396 "Улицы и дороги населённых пунктов. Правила градостроительного проектирования". 2024 г.</p>
-        <div class="founder__cards">
-          <div class="founder-card">Участник разработки "Стратегии научно-технического развития России" до 2030 года. 2018 г. Руководитель подпроекта "Тюменская область - регион транспорта будущего" в рамках приоритетного проекта "Технополис" опорного Тюменского индустриального университета 2018-2020 г.<br>Директор программы "Робототехника и автономные системы" Передовой инженерной школы Тюменского государственного университета в 2024-25 годах.</div>
-          <div class="founder-card">Руководитель госзадания на тему: "Исследование рабочего процесса ДВС при управлении механическим КПД и работе на технологических жидкостях, модифицированных СВЧ-излучением" № 9.9670.2017/БЧ. 2017-2019 год.<br>Руководитель госзадания: Новые закономерности и решения для функционирования городских транспортных систем в парадигме «Переход от владения личным автомобилем к мобильности как услуге» 2020-22 год.</div>
-        </div>
-      </div>
-    </section>
-  </div>
-  </section>
-
   <!-- ===================== Заявка ===================== -->
   <section class="request" id="request" aria-labelledby="request-title">
     <div class="container request__inner">
@@ -502,6 +240,6 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=202610202236" defer></script>
+<script src="assets/js/main.js?v=202610261351" defer></script>
 </body>
 </html>
