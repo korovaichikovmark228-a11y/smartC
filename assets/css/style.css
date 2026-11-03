@@ -316,8 +316,33 @@ main { display: block; }
 }
 .hero__actions .btn--outline { height: 63px; margin-top: -1px; }
 
+/* ---------- Сколково и Фонд содействия инновациям ---------- */
+.support {
+  display: flex;
+  gap: 24px;
+  padding-top: 40px;
+}
+.support__item {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 104px;
+  padding: 18px 28px;
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.support__logo { flex: none; width: auto; height: 62px; }
+.support__logo--fond { height: 56px; }
+.support__text {
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
 /* ---------- Ключевые цели + карта ---------- */
-.goals { padding-top: 99px; }
+.goals { padding-top: 72px; }
 .goals__title {
   font-size: 25px;
   line-height: 25px;
@@ -1076,9 +1101,7 @@ main { display: block; }
 .gov-logos img:nth-child(2) { width: 325px; }
 .gov-logos img:nth-child(3) { width: 366px; }
 
-.letters { margin-top: 104px; }
-.letters__title { margin-left: 6px; }
-.letters__rows { margin-top: 28px; }
+.letters { margin-top: 64px; }
 .letters__row { display: flex; }
 .letter {
   flex: var(--ar) 1 0;
@@ -1371,6 +1394,8 @@ main { display: block; }
   .request__side { width: 100%; max-width: 420px; }
   .request__submit { width: 100%; }
 
+  .support { flex-direction: column; gap: 14px; }
+  .support__item { flex: none; min-height: 0; }
 
   .map-wrap { margin-top: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
   .ru-map { --t: 38px; margin-top: calc(var(--t) * 1.2); }
@@ -1412,7 +1437,12 @@ main { display: block; }
   .hero__actions .btn--outline { height: 56px; margin-top: 0; }
   .price-tag { width: 100%; font-size: 16px; line-height: 1.2; }
 
-  .goals { padding-top: 56px; }
+  .support { gap: 12px; padding-top: 24px; }
+  .support__item { gap: 16px; padding: 14px 16px; }
+  .support__logo { height: 48px; }
+  .support__logo--fond { height: 40px; }
+  .support__text { font-size: 16px; }
+  .goals { padding-top: 48px; }
   .goals__title { font-size: 21px; line-height: 1.2; }
   .goals__stats { flex-direction: column; }
   .stat { height: 140px; }
@@ -1473,7 +1503,7 @@ main { display: block; }
   .doc-item { padding: 14px; align-items: flex-start; }
   .doc-item__text { font-size: 15px; line-height: 1.45; }
   .doc-item__icon { width: 28px; margin-right: 14px; }
-  .letters { margin-top: 56px; }
+  .letters { margin-top: 36px; }
   .letter { flex: 1 1 100%; }
   .lightbox { padding: 64px 8px; }
   .lightbox__prev, .lightbox__next { top: auto; bottom: 10px; margin: 0; }
